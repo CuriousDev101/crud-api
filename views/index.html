@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo API Documentation</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark mb-4 sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">Todo API Documentation</a>
+        </div>
+    </nav>
+
+    <main class="container mt-4">
+        <h1 class="mb-4">Welcome to Todoer - Create your own todo</h1>
+        
+        <div class="row g-4">
+            <div class="col-md-6">
+                <div class="card border-primary">
+                    <div class="card-header bg-primary text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="btn btn-sm btn-outline-light">POST</span>
+                            <span class="text-white">/create-todo</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <pre class="bg-light p-3 rounded">
+{
+    "__id": "l23poi42inkjoi24oui1iuio",
+    "text": "learn backend",
+    "priority": "high",
+    "deadline": "10/2/25",
+    "-v": 0
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-success">
+                    <div class="card-header bg-success text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="btn btn-sm btn-outline-light">GET</span>
+                            <span class="text-white">/todo/:id</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <pre class="bg-light p-3 rounded">
+{
+    "__id": "l23poi42inkjoi24oui1iuio",
+    "text": "learn backend",
+    "priority": "high",
+    "deadline": "10/2/25",
+    "-v": 0
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PATCH Endpoint Card -->
+            <div class="col-md-6">
+                <div class="card border-info">
+                    <div class="card-header bg-info text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="btn btn-sm btn-outline-light">PATCH</span>
+                            <span class="text-white">/:todoId</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <pre class="bg-light p-3 rounded">
+{
+    "text": "updated todo text",
+    "priority": "medium",
+    "deadline": "10/3/25"
+}</pre>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-danger">
+                    <div class="card-header bg-danger text-white">
+                        <div class="d-flex justify-content-between align-items-center">
+                            <span class="btn btn-sm btn-outline-light">DELETE</span>
+                            <span class="text-white">/delete/:todoId</span>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <p>No request body needed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-5">
+            <h2>Server Status Check</h2>
+            <button type="button" class="btn btn-primary">GET /todo</button>
+            <p>Returns server status and confirms API connectivity</p>
+        </div>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
